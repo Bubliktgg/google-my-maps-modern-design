@@ -1,0 +1,46 @@
+{
+    "manifest_version": 3,
+    "name": "My Maps — Modern Design",
+    "version": "2.3.2",
+    "description": "Updated design for Google My Maps by bbublllikk",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "host_permissions": [
+        "https://www.google.com/maps/d/u/0/viewer*",
+        "https://www.google.com/maps/d/u/1/viewer*",
+        "https://www.google.com/maps/d/u/*/viewer*",
+        "https://www.google.com/maps/d/u/0/edit*",
+        "https://www.google.com/maps/d/u/1/edit*",
+        "https://www.google.com/maps/d/u/*/edit*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.google.com/maps/d/u/0/viewer*",
+                "https://www.google.com/maps/d/u/1/viewer*",
+                "https://www.google.com/maps/d/u/*/viewer*",
+                "https://www.google.com/maps/d/u/0/edit*",
+                "https://www.google.com/maps/d/u/1/edit*",
+                "https://www.google.com/maps/d/u/*/edit*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Настройки дизайна My Maps"
+    }
+}
