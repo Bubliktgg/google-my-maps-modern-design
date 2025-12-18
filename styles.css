@@ -153,12 +153,18 @@ div.XKSfm-Sx9Kwc,
     background-color: rgb(29, 69, 133, 0.85) !important;
 }
 
-.i4ewOd-ij8cu {
+.i4ewOd-ij8cu,
+.mU4ghb-PBWx0c-ij8cu-SmKAyb,
+.mU4ghb-qAWA2-ij8cu-SmKAyb,
+.G0jgYd-b0t70b-x5cW0b-i4ewOd-V67aGc {
     color: rgb(8, 66, 160) !important;
+    opacity: 1 !important;
 }
 
 /* Информационный блок */
-.mU4ghb-X9G3K-tJHJj {
+.mU4ghb-X9G3K-tJHJj,
+.G0jgYd-b0t70b-x5cW0b-i4ewOd,
+.wT65Ac-LS81yb {
     margin: 12px !important;
     padding: 16px 20px !important;
     border-radius: 12px !important;
@@ -169,9 +175,27 @@ div.XKSfm-Sx9Kwc,
     transition: all 0.3s ease !important;
 }
 
-.mU4ghb-X9G3K-tJHJj:hover {
+.mU4ghb-X9G3K-tJHJj:hover,
+.G0jgYd-b0t70b-x5cW0b-i4ewOd:hover,
+.wT65Ac-LS81yb:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     transform: translateY(-1px) !important;
+}
+
+.wT65Ac-V67aGc {
+    color: rgb(87, 125, 187) !important;
+    opacity: 1 !important;
+}
+
+.wT65Ac-LS81yb .wT65Ac-i4ewOd-r4nke {
+    color: rgb(8, 41, 93) !important;
+}
+
+.wT65Ac-LS81yb .wT65Ac-i4ewOd-r4nke,
+.wT65Ac-i4ewOd-ij8cu {
+    color: rgb(8, 66, 160) !important;
+    opacity: 1 !important;
+    overflow-wrap: break-word !important;
 }
 
 /* ===== СТИЛИ ДЛЯ СТРАНИЦЫ РЕДАКТИРОВАНИЯ (EDIT) ===== */
@@ -383,8 +407,6 @@ div.XKSfm-Sx9Kwc,
 
 /* Цвет текста */
 .i4ewOd-LQLjdd li,
-.mU4ghb-PBWx0c-ij8cu-SmKAyb,
-.mU4ghb-qAWA2-ij8cu-SmKAyb,
 .HzV7m-mU4ghb-nUpftc-NnAfwf-fmcmS,
 .mU4ghb-IMAj2e-IT5dJd-fmcmS,
 .i4ewOd-nUpftc-NnAfwf-fmcmS,
