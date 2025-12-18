@@ -50,19 +50,21 @@
 ---
 
 ## 🏗️ Структура проекта
+```
 my-maps-modern-design/
-├── manifest.json # Конфигурация расширения
-├── content.js # Основная логика
-├── pataka-base64.js # Ресурсы
-├── styles.css # Все стили
-├── popup.html # Интерфейс управления
-├── popup.js # Логика popup
-├── icons/ # Иконки расширения
-│ ├── icon16.png
-│ ├── icon48.png
-│ └── icon128.png
-├── LICENSE # MIT Лицензия
-└── README.md # Эта документация
+├── manifest.json          # Конфигурация расширения
+├── content.js            # Основная логика
+├── pataka-base64.js      # Ресурсы
+├── styles.css            # Все стили
+├── popup.html            # Интерфейс управления
+├── popup.js              # Логика popup
+├── icons/                # Иконки расширения
+│   ├── icon16.png
+│   ├── icon48.png
+│   └── icon128.png
+├── LICENSE               # MIT Лицензия
+└── README.md             # Эта документация
+```
 
 ---
 
