@@ -40,9 +40,49 @@
 .b0t70b-haAclf,
 div.XKSfm-Sx9Kwc,
 .picker-dialog,
-#stylepopup-popup {
+#stylepopup-popup,
+.jgvuAb.iWO5td .ncFHed {
     border-radius: 10px !important;
     overflow: hidden !important;
+}
+
+/* Серые иконки в чёрные */
+.i4ewOd-rymPhb-rymPhb-nUpftc .i4ewOd-ibnC6b-xl07Ob-Bz112c,
+.i4ewOd-rymPhb-rymPhb-nUpftc .i4ewOd-ibnC6b-euCgFf-Bz112c,
+.i4ewOd-ibnC6b-PoC6nf-jOfkMb-Bz112c,
+.i4ewOd-ibnC6b-J2xVie-ndfHFb-Bz112c,
+.gb_J .gb_B,
+.i4ewOd-LQLjdd li:before,
+.un1lmc-pbTTYe-ibnC6b-DyVDA,
+.un1lmc-j4gsHd,
+.i4ewOd-xl07Ob,
+.VIpgJd-INgbqf-LgbsSe .HB1eCd-Bz112c,
+.VIpgJd-INgbqf-xl07Ob-LgbsSe .HB1eCd-Bz112c,
+.QA0Szd-Bz112c {
+    opacity: .8 !important;
+}
+
+#zoomToolbar .VIpgJd-INgbqf-LgbsSe-OWB6Me .HB1eCd-Bz112c,
+#undoRedoToolbar .VIpgJd-INgbqf-LgbsSe-OWB6Me .HB1eCd-Bz112c,
+#drawingToolbar .VIpgJd-INgbqf-LgbsSe-OWB6Me .HB1eCd-Bz112c,
+#directionsToolbar .VIpgJd-INgbqf-LgbsSe-OWB6Me .HB1eCd-Bz112c,
+#measureToolbar .VIpgJd-INgbqf-LgbsSe-OWB6Me .HB1eCd-Bz112c,
+#mobileToolbar .VIpgJd-INgbqf-LgbsSe-OWB6Me .HB1eCd-Bz112c {
+    opacity: .5 !important;
+}
+
+.i4ewOd-TaUzNb-haAclf li.i4ewOd-TaUzNb-Bz112c-LgbsSe::after,
+.psjCIe-LgbsSe::after,
+.psjCIe-Bz112c::before {
+    opacity: .65 !important;
+}
+
+.psjCIe-Bz112c {
+    color: #555 !important;
+}
+
+.e2CuFe {
+    border-color: rgb(0 0 0 / 60%) transparent !important;
 }
 
 /* Zoom controls - позиционирование */
@@ -156,7 +196,8 @@ div.XKSfm-Sx9Kwc,
 .i4ewOd-ij8cu,
 .mU4ghb-PBWx0c-ij8cu-SmKAyb,
 .mU4ghb-qAWA2-ij8cu-SmKAyb,
-.G0jgYd-b0t70b-x5cW0b-i4ewOd-V67aGc {
+.G0jgYd-b0t70b-x5cW0b-i4ewOd-V67aGc,
+.i4ewOd-LQLjdd li {
     color: rgb(8, 66, 160) !important;
     opacity: 1 !important;
 }
@@ -198,6 +239,17 @@ div.XKSfm-Sx9Kwc,
     overflow-wrap: break-word !important;
 }
 
+/* Нижний блок */
+.mU4ghb-pbTTYe-n0tgWb-haAclf {
+    height: calc(100vh - 100px) !important;
+}
+
+/* Фикс кнопки переключения карты */
+.OFA0We-haAclf .OFA0We-HzV7m,
+div.OFA0We-haAclf.OFA0We-HzV7m {
+    margin-top: 0 !important;
+}
+
 /* ===== СТИЛИ ДЛЯ СТРАНИЦЫ РЕДАКТИРОВАНИЯ (EDIT) ===== */
 
 #map-title-desc-bar .i4ewOd-r4nke {
@@ -207,27 +259,35 @@ div.XKSfm-Sx9Kwc,
     border: 1px solid rgba(7, 29, 65, 0.2) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
     background: var(--dt-primary-container, rgba(29, 69, 133)) !important;
-    transition: all 0.3s ease !important;
 }
 
 #map-title-desc-bar .i4ewOd-r4nke:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-    transform: translateY(-1px) !important;
-}
-
-#map-action-menu {
-    right: 0 !important;
 }
 
 .i4ewOd-xl07Ob {
-    top: 74px !important;
+    top: 68px !important;
+    right: 0 !important;
+}
+
+.OMz1o-jOfkMb-vOkj6e,
+.OMz1o-jOfkMb-Vj7tjb,
+.OMz1o-jOfkMb-RcAFl,
+.OMz1o-jOfkMb-XAXldd,
+.OMz1o-jOfkMb-JnhlQb,
+.OMz1o-jOfkMb-m0vcme {
+    top: 96px !important;
 }
 
 .tk3N6e-y4JFTd {
-    border-radius: 10px;
     border: none !important;
     margin: 0 !important;
     flex: 1 !important;
+    box-shadow: none !important;
+    border-radius: 12px !important;
+    border: 1px solid rgb(9, 56, 131, 0.2) !important;
+    color: rgb(8, 66, 160) !important;
+    background: var(--dt-primary-container, rgb(232, 240, 254, 0.2)) !important;
 }
 
 .tk3N6e-y4JFTd:focus {
@@ -241,7 +301,9 @@ div.XKSfm-Sx9Kwc,
 }
 
 .un1lmc-pbTTYe-ibnC6b-ZmdkE,
-.un1lmc-pbTTYe-ibnC6b-gk6SMd {
+.un1lmc-pbTTYe-ibnC6b-gk6SMd,
+.VIpgJd-j7LFlb-sn54Q,
+.VIpgJd-j7LFlb-ZmdkE {
     border-radius: 12px !important;
     background: rgba(58, 124, 231, 0.1) !important;
 }
@@ -335,11 +397,17 @@ div.XKSfm-Sx9Kwc,
 .neVct-n9oEIb .Te60Vd-ZMv3u.dIxMhd-bN97Pc-b3rLgd,
 .un1lmc-xguqbd-aijzrb,
 .un1lmc-u0pjoe-aijzrb {
-    background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
+    background: var(--dt-primary-container, rgb(232, 240, 254, 1)) !important;
     border: 1px solid rgb(9, 56, 131, 0.2) !important;
     color: #0842a0 !important;
     border-radius: 10px !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.tk3N6e-cXJiPb-Tswv1b,
+.neVct-n9oEIb .Te60Vd-ZMv3u.dIxMhd-bN97Pc-b3rLgd {
+    background: var(--dt-primary-container, rgb(232, 240, 254, 0.75)) !important;
+    backdrop-filter: blur(4px) !important;
 }
 
 /* Блок описания карты */
@@ -406,7 +474,6 @@ div.XKSfm-Sx9Kwc,
 }
 
 /* Цвет текста */
-.i4ewOd-LQLjdd li,
 .HzV7m-mU4ghb-nUpftc-NnAfwf-fmcmS,
 .mU4ghb-IMAj2e-IT5dJd-fmcmS,
 .i4ewOd-nUpftc-NnAfwf-fmcmS,
@@ -482,8 +549,7 @@ TD.jyrRxf-oKdM2c-tJHJj {
 .G0jgYd-tJHJj-ibnC6b,
 .ztA2jd-SUR3Rd,
 .XKSfm-Sx9Kwc-bN97Pc textarea,
-.i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-p83tee-lTBxed[contenteditable=true],
-.tk3N6e-y4JFTd {
+.i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-p83tee-lTBxed[contenteditable=true] {
     border-radius: 12px !important;
     border: 1px solid rgb(9, 56, 131, 0.2) !important;
     color: rgb(8, 66, 160) !important;
@@ -645,9 +711,10 @@ TD.jyrRxf-oKdM2c-tJHJj {
 #table-body-container,
 .i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-r4nke-haAclf,
 .mU4ghb-pbTTYe-n0tgWb-haAclf,
-.PbnGhe {
+.PbnGhe,
+.i4ewOd-rymPhb-SmKAyb-haAclf {
     scrollbar-width: thin !important;
-    scrollbar-color: rgba(0, 0, 0, 0.3) transparent !important;
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent !important;
 }
 
 /* Для Chrome/Edge/Safari - общие стили */
@@ -655,9 +722,9 @@ TD.jyrRxf-oKdM2c-tJHJj {
 #table-body-container::-webkit-scrollbar,
 .i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-r4nke-haAclf::-webkit-scrollbar,
 .mU4ghb-pbTTYe-n0tgWb-haAclf::-webkit-scrollbar,
-.PbnGhe::-webkit-scrollbar {
+.PbnGhe::-webkit-scrollbar,
+.i4ewOd-rymPhb-SmKAyb-haAclf::-webkit-scrollbar {
     width: 12px !important;
-    /* Немного шире для отступа */
     height: 12px !important;
 }
 
@@ -666,11 +733,11 @@ TD.jyrRxf-oKdM2c-tJHJj {
 #table-body-container::-webkit-scrollbar-track,
 .i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-r4nke-haAclf::-webkit-scrollbar-track,
 .mU4ghb-pbTTYe-n0tgWb-haAclf::-webkit-scrollbar-track,
-.PbnGhe::-webkit-scrollbar-track {
+.PbnGhe::-webkit-scrollbar-track,
+.i4ewOd-rymPhb-SmKAyb-haAclf::-webkit-scrollbar-track {
     background: transparent !important;
     border-radius: 6px !important;
     margin: 4px !important;
-    /* Увеличенный отступ */
 }
 
 /* Ползунок скроллбара */
@@ -678,14 +745,13 @@ TD.jyrRxf-oKdM2c-tJHJj {
 #table-body-container::-webkit-scrollbar-thumb,
 .i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-r4nke-haAclf::-webkit-scrollbar-thumb,
 .mU4ghb-pbTTYe-n0tgWb-haAclf::-webkit-scrollbar-thumb,
-.PbnGhe::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2) !important;
+.PbnGhe::-webkit-scrollbar-thumb,
+.i4ewOd-rymPhb-SmKAyb-haAclf::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4) !important;
     border-radius: 6px !important;
     min-height: 40px !important;
     border: 3px solid transparent !important;
-    /* Добавляем прозрачную рамку */
     background-clip: content-box !important;
-    /* Ограничиваем фон областью внутри рамки */
 }
 
 /* Ползунок при наведении */
@@ -693,8 +759,9 @@ TD.jyrRxf-oKdM2c-tJHJj {
 #table-body-container::-webkit-scrollbar-thumb:hover,
 .i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-r4nke-haAclf::-webkit-scrollbar-thumb:hover,
 .mU4ghb-pbTTYe-n0tgWb-haAclf::-webkit-scrollbar-thumb:hover,
-.PbnGhe::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.3) !important;
+.PbnGhe::-webkit-scrollbar-thumb:hover,
+.i4ewOd-rymPhb-SmKAyb-haAclf::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5) !important;
     border: 3px solid transparent !important;
     background-clip: content-box !important;
 }
@@ -704,8 +771,9 @@ TD.jyrRxf-oKdM2c-tJHJj {
 #table-body-container::-webkit-scrollbar-thumb:active,
 .i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-r4nke-haAclf::-webkit-scrollbar-thumb:active,
 .mU4ghb-pbTTYe-n0tgWb-haAclf::-webkit-scrollbar-thumb:active,
-.PbnGhe::-webkit-scrollbar-thumb:active {
-    background: rgba(0, 0, 0, 0.4) !important;
+.PbnGhe::-webkit-scrollbar-thumb:active,
+.i4ewOd-rymPhb-SmKAyb-haAclf::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.6) !important;
     border: 3px solid transparent !important;
     background-clip: content-box !important;
 }
@@ -715,13 +783,215 @@ TD.jyrRxf-oKdM2c-tJHJj {
 #table-body-container::-webkit-scrollbar-corner,
 .i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-r4nke-haAclf::-webkit-scrollbar-corner,
 .mU4ghb-pbTTYe-n0tgWb-haAclf::-webkit-scrollbar-corner,
-.PbnGhe::-webkit-scrollbar-corner {
+.PbnGhe::-webkit-scrollbar-corner,
+.i4ewOd-rymPhb-SmKAyb-haAclf::-webkit-scrollbar-corner {
     background: transparent !important;
 }
 
 .PbnGhe,
 .i4ewOd-TaUzNb-r4nke-haAclf {
     overflow-y: auto !important;
+}
+
+/* ===== СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ ===== */
+
+/* Фоны и шапка */
+#docs-editor {
+    background: rgb(248, 250, 253) !important;
+}
+
+.QT3Do-EaZ7Cc-haAclf {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.i4ewOd-rymPhb-ObfsIf-nUpftc .i4ewOd-ibnC6b-JUCs7e-n5VRYe {
+    display: none !important;
+}
+
+.i4ewOd-rymPhb-haAclf-tJHJj {
+    background: #e9eef6 !important;
+    box-shadow: none !important;
+    border-radius: 50px !important;
+    margin: 0 50px !important;
+    padding: 10px 10px !important;
+}
+
+.JPdR6b .z80M1:hover {
+    border-radius: 12px !important;
+    background: rgba(58, 124, 231, 0.1) !important;
+}
+
+/* Первый элемент */
+.i4ewOd-rymPhb-ibnC6b-haAclf:first-child {
+    border-radius: 12px 12px 0 0 !important;
+    border-bottom: none !important;
+}
+
+/* Последний элемент */
+.i4ewOd-rymPhb-ibnC6b-haAclf:last-child {
+    border-radius: 0 0 12px 12px !important;
+    border-top: none !important;
+}
+
+.i4ewOd-rymPhb-ObfsIf-nUpftc .i4ewOd-ibnC6b-jfdpUb-haAclf {
+    background: none !important;
+}
+
+/* Элементы карт */
+.i4ewOd-rymPhb-ObfsIf-nUpftc .i4ewOd-ibnC6b-JUCs7e,
+.i4ewOd-rymPhb-ObfsIf-nUpftc .i4ewOd-rymPhb-ibnC6b-haAclf {
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px !important;
+}
+
+.i4ewOd-rymPhb-ObfsIf-nUpftc .i4ewOd-ibnC6b-JUCs7e:hover,
+.i4ewOd-rymPhb-ObfsIf-nUpftc .i4ewOd-rymPhb-ibnC6b-haAclf:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
+.QT3Do-t0O6ic-LgbsSe-haAclf .QT3Do-t0O6ic-LgbsSe {
+    border-radius: 25px !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    border: 1px solid rgb(9, 56, 131, 0.2) !important;
+    color: rgb(8, 66, 160) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
+    transition: all 0.3s ease !important;
+}
+
+.QT3Do-t0O6ic-LgbsSe-haAclf .QT3Do-t0O6ic-LgbsSe:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
+.QT3Do-t0O6ic-BIzmGd-haAclf .QT3Do-t0O6ic-BIzmGd {
+    background-color: rgb(48, 151, 255) !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.QT3Do-t0O6ic-BIzmGd-haAclf .QT3Do-t0O6ic-BIzmGd:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-1px) !important;
+    background-color: rgb(15, 111, 207) !important;
+}
+
+.QT3Do-LgbsSe-Bz112c {
+    text-shadow: 1px 1px #2d58a0 !important;
+}
+
+.i4ewOd-rymPhb-haAclf-yOOK0 .kaAt2.KKjvXb {
+    color: #fff !important;
+}
+
+.i4ewOd-rymPhb-haAclf-yOOK0 .s7bIcf {
+    background-color: rgb(8, 66, 160) !important;
+}
+
+.WwvKTc {
+    width: 60% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    border-radius: 50px !important;
+    border: 0px solid transparent !important;
+}
+
+.i4ewOd-rymPhb-haAclf-yOOK0 .MbhUzd,
+.FAGNtc.MbhUzd {
+    display: none !important;
+}
+
+/* Кнопки */
+.mrslJ {
+    border-bottom: 1px solid transparent !important;
+}
+
+.i4ewOd-ibnC6b-Tswv1b-V1ur5d-haAclf {
+    border-radius: 12px !important;
+    border: 1px solid rgb(9, 56, 131, 0.2) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    color: #fff;
+    background: var(--dt-primary-container, rgba(29, 69, 133, 0.8)) !important;
+}
+
+.i4ewOd-ibnC6b-Tswv1b-HyDyrc-haAclf,
+.i4ewOd-rymPhb-haAclf-yOOK0-j4gsHd .KKjvXb,
+.kx3Hed {
+    border-radius: 25px !important;
+    font-weight: bold !important;
+    border: 1px solid rgb(9, 56, 131, 0.2) !important;
+    color: rgb(8, 66, 160) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
+    transition: all 0.3s ease !important;
+}
+
+.i4ewOd-rymPhb-haAclf-yOOK0-j4gsHd .KKjvXb:hover,
+.kx3Hed:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
+.i4ewOd-ibnC6b-V1ur5d,
+.i4ewOd-ibnC6b-Tswv1b-haAclf-ibnC6b {
+    font-weight: normal !important;
+    padding-left: 5px !important;
+    margin-right: 5px !important;
+}
+
+.i4ewOd-ibnC6b-Tswv1b-V1ur5d-haAclf {
+    margin-bottom: 2px !important;
+}
+
+.kx3Hed {
+    padding: 0px 15px 0 15px !important;
+    max-height: 96% !important;
+}
+
+.i4ewOd-rymPhb-haAclf-yOOK0-AznF2e {
+    min-width: 50px !important;
+}
+
+.i4ewOd-rymPhb-yOOK0-uxAMZ-haAclf,
+.QT3Do-VfakTe {
+    border-radius: 25px !important;
+    border: 1px solid rgb(9, 56, 131, 0.2) !important;
+    color: rgb(8, 66, 160) !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px !important;
+    background: var(--dt-primary-container, rgb(193, 216, 255)) !important;
+    padding: 2px !important;
+    max-height: 46px !important;
+}
+
+
+.QT3Do-VfakTe {
+    margin: 5px !important;
+    padding: 2px !important;
+}
+
+.QT3Do-LgbsSe-haAclf {
+    border-radius: 25px !important;
+    border: 1px solid rgb(9, 56, 131, 0.2) !important;
+    color: rgb(8, 66, 160) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
+    max-height: 35px !important;
+    transition: all 0.3s ease !important;
+}
+
+.QT3Do-LgbsSe-haAclf:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
+.QT3Do-LgbsSe {
+    opacity: .8 !important;
+    top: -7px !important;
+    left: 0 !important;
 }
 
 /* ===== ФУТЕР И ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ ===== */
