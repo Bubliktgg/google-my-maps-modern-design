@@ -16,6 +16,42 @@ const CONFIG = {
     }
 };
 
+function changeFavicon() {
+    const newFavicon = chrome.runtime.getURL('icons/favicon.png');
+
+    // Удаляем старую иконку
+    document.querySelectorAll("link[rel*='icon']").forEach(link => link.remove());
+
+    // Создаём новую
+    const link = document.createElement('link');
+    link.rel = 'shortcut icon';
+    link.href = newFavicon;
+    document.head.appendChild(link);
+}
+
+function init() {
+    try {
+        changeFavicon();
+    } catch (error) {
+        console.error('Ошибка при замене иконки:', error);
+    }
+}
+
+// Запускаем и следим за изменениями
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
+}
+
+// На случай если сайт меняет иконку позже
+new MutationObserver(() => {
+    const currentIcon = document.querySelector("link[rel*='icon']");
+    if (currentIcon && !currentIcon.href.includes('chrome-extension://')) {
+        init();
+    }
+}).observe(document.head, { childList: true, subtree: true });
+
 // ===== УСТАНОВКА ЛОГОТИПА С ПРОВЕРКОЙ =====
 function setPatakaLogo() {
     try {
@@ -63,6 +99,13 @@ function setPatakaLogo() {
 // ===== УТИЛИТЫ =====
 function getPageType() {
     const url = window.location.href;
+    const path = window.location.pathname;
+
+    // Главная страница: /maps/d/u/0/ (без viewer/edit)
+    if (path.endsWith('/u/0/') || path.match(/\/u\/\d+\/$/)) {
+        return 'main';
+    }
+
     return url.includes('/viewer?') ? 'viewer' :
         url.includes('/edit?') ? 'edit' : 'other';
 }
@@ -219,8 +262,75 @@ function enhanceSlidersWithProgress() {
 
                     handle.addEventListener('mouseleave', () => {
                         const display = handle.querySelector('.pataka-slider-value');
-                        if (display) display.style.opacity = '0';
+                        if (display) {
+                            // Если ползунок двигается, не скрываем значение
+                            if (!slider.classList.contains('pataka-dragging')) {
+                                display.style.opacity = '0';
+                            }
+                        }
                     });
+
+                    // ДРАГГИНГ: показываем значение при перемещении
+                    let isDragging = false;
+
+                    handle.addEventListener('mousedown', () => {
+                        isDragging = true;
+                        slider.classList.add('pataka-dragging');
+                        const display = handle.querySelector('.pataka-slider-value');
+                        if (display) {
+                            display.style.opacity = '1';
+                            display.classList.add('pataka-dragging-active');
+                        }
+                    });
+
+                    document.addEventListener('mouseup', () => {
+                        if (isDragging) {
+                            isDragging = false;
+                            slider.classList.remove('pataka-dragging');
+
+                            const display = handle.querySelector('.pataka-slider-value');
+                            if (display) {
+                                display.classList.remove('pataka-dragging-active');
+
+                                // Показываем ещё 1 секунду после отпускания, затем скрываем
+                                setTimeout(() => {
+                                    if (!slider.classList.contains('pataka-dragging') &&
+                                        !handle.matches(':hover')) {
+                                        display.style.opacity = '0';
+                                    }
+                                }, 1000);
+                            }
+                        }
+                    });
+
+                    // Для тач-устройств
+                    handle.addEventListener('touchstart', () => {
+                        isDragging = true;
+                        slider.classList.add('pataka-dragging');
+                        const display = handle.querySelector('.pataka-slider-value');
+                        if (display) {
+                            display.style.opacity = '1';
+                            display.classList.add('pataka-dragging-active');
+                        }
+                    }, { passive: true });
+
+                    document.addEventListener('touchend', () => {
+                        if (isDragging) {
+                            isDragging = false;
+                            slider.classList.remove('pataka-dragging');
+
+                            const display = handle.querySelector('.pataka-slider-value');
+                            if (display) {
+                                display.classList.remove('pataka-dragging-active');
+
+                                setTimeout(() => {
+                                    if (!slider.classList.contains('pataka-dragging')) {
+                                        display.style.opacity = '0';
+                                    }
+                                }, 1000);
+                            }
+                        }
+                    }, { passive: true });
                 }
 
                 // Наблюдаем за изменениями значения
@@ -244,6 +354,19 @@ function enhanceSlidersWithProgress() {
                                     valueDisplay.textContent = `${Math.round(pixels)} px`;
                                 } else {
                                     valueDisplay.textContent = `${newValue}%`;
+                                }
+
+                                // При изменении значения показываем на 1.5 секунды
+                                if (!slider.classList.contains('pataka-dragging')) {
+                                    valueDisplay.style.opacity = '1';
+                                    clearTimeout(valueDisplay._hideTimeout);
+
+                                    valueDisplay._hideTimeout = setTimeout(() => {
+                                        if (!slider.classList.contains('pataka-dragging') &&
+                                            !handle.matches(':hover')) {
+                                            valueDisplay.style.opacity = '0';
+                                        }
+                                    }, 1500);
                                 }
                             }
                         }
@@ -326,6 +449,79 @@ function applyEditStyles() {
     });
 }
 
+// ===== СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ =====
+function applyMainPageStyles() {
+    console.log('🎨 Применяем стили для главной страницы');
+
+    // Скрываем ripple-эффект (как в CSS: display: none !important)
+    safeQuerySelector('.i4ewOd-rymPhb-haAclf-yOOK0 .MbhUzd, .FAGNtc.MbhUzd').forEach(element => {
+        if (element?.style) {
+            element.style.display = 'none';
+        }
+    });
+
+    // Скрываем градиентный оверлей
+    safeQuerySelector('.i4ewOd-rymPhb-ObfsIf-nUpftc .i4ewOd-ibnC6b-JUCs7e-n5VRYe').forEach(element => {
+        if (element?.style) {
+            element.style.display = 'none';
+        }
+    });
+
+    // Стили для списка карт на главной
+    safeQuerySelector('.mU4ghb-IT5dJd').forEach(element => {
+        if (element?.style) {
+            Object.assign(element.style, {
+                borderRadius: '12px',
+                border: '1px solid #e0e0e0',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+                margin: '8px'
+            });
+        }
+    });
+
+    // Карточки карт - улучшенные стили
+    safeQuerySelector('.NlWrkb').forEach(card => {
+        if (card?.style) {
+            Object.assign(card.style, {
+                borderRadius: '10px',
+                overflow: 'hidden',
+                boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)',
+                transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+            });
+
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-2px)';
+                card.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.1)';
+            });
+        }
+    });
+
+    // Элементы списка с правильными скруглениями
+    safeQuerySelector('.i4ewOd-rymPhb-ibnC6b-haAclf').forEach((element, index, array) => {
+        if (element?.style) {
+            if (index === 0) {
+                // Первый элемент
+                element.style.borderRadius = '12px 12px 0 0';
+                element.style.borderBottom = 'none';
+            } else if (index === array.length - 1) {
+                // Последний элемент
+                element.style.borderRadius = '0 0 12px 12px';
+                element.style.borderTop = 'none';
+            } else {
+                // Средние элементы
+                element.style.borderRadius = '0';
+                element.style.borderTop = 'none';
+                element.style.borderBottom = 'none';
+            }
+        }
+    });
+}
+
 function applyCommonStyles() {
     console.log('🎨 Применяем общие стили');
 
@@ -342,14 +538,28 @@ function applyCommonStyles() {
     safeQuerySelector('.nJjxad-m9bMae-LgbsSe').forEach(button => {
         if (button?.style) button.style.borderRadius = '0 0 10px 10px';
     });
+
+    // Фикс кнопки переключения карты
+    safeQuerySelector('.OFA0We-haAclf .OFA0We-HzV7m, div.OFA0We-haAclf.OFA0We-HzV7m').forEach(element => {
+        if (element?.style) {
+            element.style.marginTop = '0';
+        }
+    });
 }
 
+// ===== ФУНКЦИЯ ПРИМЕНЕНИЯ ВСЕХ СТИЛЕЙ =====
 function applyAllStyles() {
     const pageType = getPageType();
     console.log(`🎨 My Maps Modern Design: ${pageType} страница`);
 
-    if (pageType === 'viewer') applyViewerStyles();
-    if (pageType === 'edit') applyEditStyles();
+    if (pageType === 'viewer') {
+        applyViewerStyles();
+    } else if (pageType === 'edit') {
+        applyEditStyles();
+    } else if (pageType === 'main') {
+        applyMainPageStyles();
+    }
+
     applyCommonStyles();
     styleCheckboxesSafely();
     enhanceSlidersWithProgress();
@@ -365,7 +575,9 @@ function createDOMObserver() {
                 '.mU4ghb-X9G3K-tJHJj',
                 'div.XKSfm-Sx9Kwc',
                 '.VIpgJd-SxecR',
-                '.HzV7m-pbTTYe-PGTmtf'
+                '.HzV7m-pbTTYe-PGTmtf',
+                '.i4ewOd-rymPhb-ibnC6b-haAclf', // Для главной страницы
+                '.NlWrkb' // Карточки на главной
             ];
 
             const hasChanges = targetSelectors.some(selector =>
@@ -396,16 +608,10 @@ function initialize() {
         const pageType = getPageType();
         console.log(`🚀 My Maps Modern Design запущен (${pageType})`);
 
-        // Устанавливаем логотип если есть
         setPatakaLogo();
-
-        // Применяем стили сразу
         applyAllStyles();
-
-        // Запускаем наблюдатель
         createDOMObserver();
 
-        // Дополнительные проверки
         setTimeout(applyAllStyles, CONFIG.timing.initialDelay);
         setTimeout(() => {
             enhanceSlidersWithProgress();
@@ -427,7 +633,7 @@ function setupMessageHandlers() {
                     sendResponse({
                         success: true,
                         pageType: getPageType(),
-                        message: `Стили применены (${getPageType()})`
+                        message: `Стили применены для ${getPageType()} страницы`
                     });
                 } else if (request.action === "getPageInfo") {
                     sendResponse({

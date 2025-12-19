@@ -3,15 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const status = document.getElementById('status');
     const pageInfo = document.getElementById('pageInfo');
 
-    if (githubLink) {
-        githubLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            chrome.tabs.create({
-                url: 'https://github.com/Bubliktgg/google-my-maps-modern-design'
-            });
-        });
-    }
-
     loadPageInfo();
 
     refreshBtn.addEventListener('click', function () {
@@ -25,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 action: "applyStyles"
             }, function (response) {
                 if (chrome.runtime.lastError) {
-                    showStatus('❌ Ошибка: ' + chrome.runtime.lastError.message, 'error');
+                    showStatus('❌ Расширение не активировано на этой странице', 'error');
                     return;
                 }
 
@@ -55,8 +46,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 if (response) {
-                    const pageTypeText = response.pageType === 'viewer' ? 'просмотра' :
-                        response.pageType === 'edit' ? 'редактирования' : 'неизвестная';
+                    const pageTypes = {
+                        'viewer': 'просмотра',
+                        'edit': 'редактирования',
+                        'main': 'главная (список карт)'
+                    };
+
+                    const pageTypeText = pageTypes[response.pageType] || 'неизвестная';
+
                     pageInfo.textContent = `Текущая страница: ${pageTypeText}`;
                 } else {
                     pageInfo.textContent = 'Информация о странице недоступна';
