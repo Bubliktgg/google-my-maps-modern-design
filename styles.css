@@ -281,10 +281,10 @@ div.XKSfm-Sx9Kwc,
     margin: 12px !important;
     padding: 16px 20px !important;
     border-radius: 12px !important;
-    border: 1px solid rgb(9, 56, 131, 0.2) !important;
+    border: 0px solid rgb(9, 56, 131, 0.2) !important;
     color: rgb(8, 66, 160) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    background: var(--dt-primary-container, rgb(244, 248, 255)) !important;
+    background: var(--dt-primary-container, rgb(238, 243, 253)) !important;
     transition: all 0.3s ease !important;
 }
 
@@ -498,6 +498,13 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
     border: 1px solid transparent !important;
 }
 
+#stylepopup-color,
+#stylepopup-popular-container .VIpgJd-INgbqf,
+#stylepopup-othericons .VIpgJd-INgbqf {
+    border-radius: 12px !important;
+    background: var(--dt-primary-container, rgb(244, 247, 251)) !important;
+}
+
 #drawingToolbar,
 #drawingToolbar,
 #measureToolbar,
@@ -627,7 +634,7 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
     margin: 0 4px !important;
     padding: 10px 20px !important;
     border-radius: 12px !important;
-    border: 1px solid rgb(9, 56, 131, 0.2) !important;
+    border: 0px solid rgb(9, 56, 131, 0.2) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
     transition: all 0.3s ease !important;
     display: flex !important;
