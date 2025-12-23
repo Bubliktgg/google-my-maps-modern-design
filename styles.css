@@ -485,6 +485,11 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
     border: 1px solid rgb(50, 111, 208, 0.4) !important;
 }
 
+.Lr2Z8d-V67aGc>div:first-child,
+.BcjICd-V67aGc>div:first-child {
+    margin-right: 4px !important;
+}
+
 /* Панели инструментов */
 .VIpgJd-INgbqf,
 .sfGayb-uXLMpd-INgbqf-RCfa3e,
@@ -802,6 +807,10 @@ TD.jyrRxf-oKdM2c-tJHJj {
     background-color: #0747ad !important;
 }
 
+#mapsprosearch-button .tk3N6e-LgbsSe-JIbuQc {
+    border-radius: 0 25px 25px 0 !important;
+}
+
 .XKSfm-Sx9Kwc-c6xFrd button {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px !important;
     transition: all 0.3s ease !important;
@@ -1092,7 +1101,7 @@ TD.jyrRxf-oKdM2c-tJHJj {
     border-radius: 25px !important;
     font-size: 15px !important;
     font-weight: bold !important;
-    border: none !important;
+    border: 1px solid rgb(9, 56, 131, 0.2) !important;
     color: rgb(8, 66, 160) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
     background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
@@ -1102,6 +1111,12 @@ TD.jyrRxf-oKdM2c-tJHJj {
 .QT3Do-t0O6ic-LgbsSe-haAclf .QT3Do-t0O6ic-LgbsSe:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     transform: translateY(-1px) !important;
+}
+
+@media (max-width: 1080px) {
+    .i4ewOd-rymPhb-haAclf-yOOK0-j4gsHd {
+        padding-top: 8px !important;
+    }
 }
 
 .QT3Do-t0O6ic-BIzmGd-haAclf .QT3Do-t0O6ic-BIzmGd {
@@ -1156,20 +1171,33 @@ TD.jyrRxf-oKdM2c-tJHJj {
 
 .i4ewOd-ibnC6b-Tswv1b-HyDyrc-haAclf,
 .i4ewOd-rymPhb-haAclf-yOOK0-j4gsHd .KKjvXb,
+.MocG8c.ZB46qe-wQNmvb.LMgvRb.KKjvXb,
 .kx3Hed {
     border-radius: 25px !important;
     font-weight: bold !important;
     border: 1px solid rgb(9, 56, 131, 0.2) !important;
     color: rgb(8, 66, 160) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    outline: none !important;
     background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
     transition: all 0.3s ease !important;
 }
 
+/* Фиксы выпадающих меню для print и на главной странице */
+.MocG8c.ZB46qe-wQNmvb.LMgvRb.KKjvXb {
+    border: none !important;
+}
+
 .i4ewOd-rymPhb-haAclf-yOOK0-j4gsHd .KKjvXb:hover,
+.MocG8c.ZB46qe-wQNmvb.LMgvRb.KKjvXb:hover,
 .kx3Hed:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     transform: translateY(-1px) !important;
+}
+
+.i4ewOd-rymPhb-haAclf-yOOK0-j4gsHd .KKjvXb:hover,
+.MocG8c.ZB46qe-wQNmvb.LMgvRb.KKjvXb:hover {
+    transform: none !important;
 }
 
 .ry3kXd .MocG8c {
@@ -1179,6 +1207,10 @@ TD.jyrRxf-oKdM2c-tJHJj {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
     background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
     transition: all 0.3s ease !important;
+}
+
+.i4ewOd-rymPhb-haAclf-yOOK0-j4gsHd .ry3kXd .MocG8c.LMgvRb.KKjvXb {
+    border: 1px solid rgb(9, 56, 131, 0.2) !important;
 }
 
 .i4ewOd-ibnC6b-V1ur5d,
@@ -1210,8 +1242,8 @@ TD.jyrRxf-oKdM2c-tJHJj {
     background: var(--dt-primary-container, rgb(193, 216, 255)) !important;
     padding: 2px !important;
     max-height: 46px !important;
+    margin-top: 2px !important;
 }
-
 
 .QT3Do-VfakTe {
     margin: 5px !important;
