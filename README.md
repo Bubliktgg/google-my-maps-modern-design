@@ -5,7 +5,7 @@
 
 # ENG:
 
-**Google My Maps Modern Design** — a Chrome extension that enhances the appearance of the Google My Maps interface with modern rounded corners, shadows, and animations.
+**Google My Maps Modern Design** — a Chromium extension (Chrome, Edge, etc.) that enhances the appearance of the Google My Maps interface with modern rounded corners, shadows, and animations.
 
 ---
 
@@ -35,7 +35,7 @@
 
 1. Download the extension archive
 2. Extract it to a convenient directory
-3. Go to `chrome://extensions/`
+3. Go to `chrome://extensions/` or `edge://extensions/`
 4. Enable the **"Developer mode"** toggle
 5. Click **"Load unpacked extension"**
 6. Select the extension folder
@@ -46,7 +46,7 @@
 The extension works automatically when Google My Maps pages are loaded.
 
 ### Control via Popup
-Click the extension icon in the Chrome toolbar:
+Click the extension icon in the extension panel:
 - 🔍 **Page info** (view/edit)
 - 🔄 **Refresh styles** - force application
 - 📋 **List of applied enhancements**
@@ -88,7 +88,7 @@ Thanks to everyone who tested and suggested improvements for this extension!
 
 # RUS:
 
-**Google My Maps Modern Design** — расширение для Chrome, которое дополняет внешний вид интерфейса Google My Maps современными скруглениями, тенями и анимациями.
+**Google My Maps Modern Design** — расширение для Chromium (Chrome, Edge и т.д.), которое дополняет внешний вид интерфейса Google My Maps современными скруглениями, тенями и анимациями.
 
 ---
 
@@ -118,7 +118,7 @@ Thanks to everyone who tested and suggested improvements for this extension!
 
 1. Скачайте архив с расширением
 2. Распакуйте в удобную директорию
-3. Откройте `chrome://extensions/`
+3. Откройте `chrome://extensions/` либо `edge://extensions/`
 4. Нажмите галочку **"Режим Разработчика"**
 5. Нажмите **"Загрузить распакованное расширение"**
 6. Выберите папку с расширением
@@ -129,7 +129,7 @@ Thanks to everyone who tested and suggested improvements for this extension!
 Расширение работает автоматически при загрузке страниц Google My Maps.
 
 ### Управление через Popup
-Нажмите на иконку расширения в панели Chrome:
+Нажмите на иконку расширения в панели расширений:
 - 🔍 **Информация о странице** (просмотр/редактирование)
 - 🔄 **Обновить стили** - принудительное применение
 - 📋 **Список применённых улучшений**
