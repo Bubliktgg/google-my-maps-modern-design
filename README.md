@@ -3,6 +3,91 @@
 [![Version](https://img.shields.io/badge/version-2.4.6-lightblue.svg)](https://github.com/Bubliktgg/google-my-maps-modern-design/releases)
 [![License](https://img.shields.io/badge/license-MIT-darkgrey.svg)](LICENSE)
 
+# ENG:
+
+**Google My Maps Modern Design** — a Chrome extension that enhances the appearance of the Google My Maps interface with modern rounded corners, shadows, and animations.
+
+---
+
+## ✨ Features
+
+### 🎨 Visual Enhancements
+- **Updated design** includes rounded corners and a new color scheme
+- **Modern shadows** and depth effects
+- **Smooth animations** on hover and interaction
+- **Custom scrollbars** with a stylish design
+- **Pataka** in the screen corner
+
+### 🛠️ Functional Improvements
+- **Enhanced sliders** with a progress bar and value display
+- **Styled tool panels** (search, zoom, tools, etc.)
+- **Modernized dialog windows** and dropdown menus
+- **Information cards** with a neat design
+- **Updated My Maps homepage** now looks much more modern
+
+### 📱 Page Support
+- ✅ **Viewer page** (`/viewer`)
+- ✅ **Editor page** (`/edit`)
+- ✅ **Home page** (`/`)
+- ✅ **For all your accounts** (u/0/, u/1/, etc.)
+
+## 🚀 Installation
+
+1. Download the extension archive
+2. Extract it to a convenient directory
+3. Go to `chrome://extensions/`
+4. Enable the **"Developer mode"** toggle
+5. Click **"Load unpacked extension"**
+6. Select the extension folder
+
+## ⚙️ Usage
+
+### Automatic Application
+The extension works automatically when Google My Maps pages are loaded.
+
+### Control via Popup
+Click the extension icon in the Chrome toolbar:
+- 🔍 **Page info** (view/edit)
+- 🔄 **Refresh styles** - force application
+- 📋 **List of applied enhancements**
+
+## 🏗️ Project Structure
+```
+my-maps-modern-design/
+├── manifest.json          # Extension configuration
+├── content.js            # Main logic
+├── pataka-base64.js      # Resources
+├── styles.css            # All styles
+├── popup.html            # Control interface
+├── popup.js              # Popup logic
+├── icons/                # Extension icons
+│   ├── icon16.png
+│   ├── icon48.png
+│   ├── icon128.png
+│   └── favicon.png
+├── LICENSE               # MIT License
+└── README.md             # This documentation
+```
+
+## 📄 License
+
+Distributed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact & Support
+
+- **Author:** bbublllikk
+- **GitHub:** [github.com/Bubliktgg](https://github.com/Bubliktgg)
+
+## ⭐ Acknowledgments
+
+Thanks to everyone who tested and suggested improvements for this extension!
+
+---
+
+*This extension is not an official Google product. Google My Maps is a trademark of Google LLC.*
+
+# RUS:
+
 **Google My Maps Modern Design** — расширение для Chrome, которое дополняет внешний вид интерфейса Google My Maps современными скруглениями, тенями и анимациями.
 
 ---
