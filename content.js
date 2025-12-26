@@ -151,8 +151,8 @@ function getPageType() {
     const url = window.location.href;
     const path = window.location.pathname;
 
-    // Главная страница: /maps/d/u/0/ (без viewer/edit)
-    if (path.endsWith('/u/0/') || path.match(/\/u\/\d+\/$/)) {
+    // Главная страница: /maps/d/ или /maps/d/u/0/ и т.д.
+    if (path === '/maps/d/' || path.match(/^\/maps\/d\/u\/\d+\/$/)) {
         return 'main';
     }
 
