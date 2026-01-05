@@ -47,7 +47,7 @@ The extension works automatically when Google My Maps pages are loaded.
 
 ### Control via Popup
 Click the extension icon in the extension panel:
-- 🔍 **Page info** (view/edit)
+- 🔍 **Page info** (view/edit/main)
 - 🔄 **Refresh styles** - force application
 - 📋 **List of applied enhancements**
 
@@ -131,7 +131,7 @@ Thanks to everyone who tested and suggested improvements for this extension!
 
 ### Управление через Popup
 Нажмите на иконку расширения в панели расширений:
-- 🔍 **Информация о странице** (просмотр/редактирование)
+- 🔍 **Информация о странице** (просмотр/редактирование/главная)
 - 🔄 **Обновить стили** - принудительное применение
 - 📋 **Список применённых улучшений**
 
@@ -140,10 +140,11 @@ Thanks to everyone who tested and suggested improvements for this extension!
 my-maps-modern-design/
 ├── manifest.json          # Конфигурация расширения
 ├── content.js            # Основная логика
-├── pataka-base64.js      # Ресурсы
 ├── styles.css            # Все стили
 ├── popup.html            # Интерфейс управления
 ├── popup.js              # Логика popup
+├── resources/            # Ресурсы
+│   └── pataka.png        # Патака
 ├── icons/                # Иконки расширения
 │   ├── icon16.png
 │   ├── icon48.png
