@@ -790,13 +790,19 @@ div.fO2voc-jRmmHf-LJTIlf {
     transition: all 0.3s ease !important;
     border: 0px !important;
     border-radius: 25px !important;
-    padding: 4px !important;
+    padding: 5px !important;
+    margin-left: 4px !important;
     margin-bottom: 2px !important;
-    max-width: 300px !important;
+    max-width: 303px !important;
     border-collapse: separate !important;
     border-spacing: 0 4px !important;
     overflow: hidden !important;
     box-shadow: none !important;
+}
+
+.i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-g7W7Ed-haAclf,
+div.fO2voc-jRmmHf-LJTIlf {
+    max-width: 290px !important;
 }
 
 .JIbV8-TaUzNb-r4nke {
