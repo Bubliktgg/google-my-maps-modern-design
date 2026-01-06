@@ -974,9 +974,9 @@ TD.jyrRxf-oKdM2c-tJHJj {
     background: url(https://ssl.gstatic.com/ui/v1/disclosure/dark-grey-disclosure-arrow-down.png) center no-repeat !important;
 }
 
-#gb a.gb_Ua.gb_Ua,
-#gb a.gb_Va {
+#gb a.gb_Va.gb_Wd.gb_Od.gb_Ed {
     border-radius: 25px !important;
+    color: white !important;
 }
 
 /* Отображение фото */
@@ -1270,8 +1270,14 @@ TD.jyrRxf-oKdM2c-tJHJj {
 .QT3Do-t0O6ic-LgbsSe-haAclf {
     display: flex !important;
     align-items: center !important;
-    margin: 0 !important;
+    margin-top: 0 !important;
     height: 100% !important;
+}
+
+@media (max-width: 1080px) {
+    .QT3Do-t0O6ic-LgbsSe-haAclf {
+        display: none !important;
+    }
 }
 
 .QT3Do-t0O6ic-LgbsSe-haAclf .QT3Do-t0O6ic-LgbsSe {
@@ -1297,19 +1303,21 @@ TD.jyrRxf-oKdM2c-tJHJj {
 }
 
 .QT3Do-t0O6ic-BIzmGd-haAclf .QT3Do-t0O6ic-BIzmGd {
-    background-color: rgb(48, 151, 255) !important;
+    background-color: rgb(232, 240, 254) !important;
+    border: 1px solid rgb(9, 56, 131, 0.2) !important;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px !important;
     transition: all 0.3s ease !important;
 }
 
 .QT3Do-t0O6ic-BIzmGd-haAclf .QT3Do-t0O6ic-BIzmGd:hover {
+    background-color: rgb(222, 226, 229) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     transform: translateY(-1px) !important;
-    background-color: rgb(15, 111, 207) !important;
 }
 
 .QT3Do-LgbsSe-Bz112c {
-    text-shadow: 1px 1px #2d58a0 !important;
+    color: rgb(8, 66, 160) !important;
+    text-shadow: 1px 1px rgba(0, 45, 116, 0.25) !important;
 }
 
 .i4ewOd-rymPhb-haAclf-yOOK0 .kaAt2.KKjvXb {
@@ -1361,7 +1369,6 @@ TD.jyrRxf-oKdM2c-tJHJj {
 }
 
 .i4ewOd-rymPhb-haAclf-yOOK0-j4gsHd .KKjvXb:hover,
-.MocG8c.ZB46qe-wQNmvb.LMgvRb.KKjvXb:hover,
 .kx3Hed:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     transform: translateY(-1px) !important;
@@ -1376,6 +1383,7 @@ TD.jyrRxf-oKdM2c-tJHJj {
 /* Фиксы выпадающих меню для print и на главной странице */
 .MocG8c.ZB46qe-wQNmvb.LMgvRb.KKjvXb {
     border: none !important;
+    box-shadow: none !important;
 }
 
 .i4ewOd-rymPhb-haAclf-yOOK0-j4gsHd .KKjvXb:hover,
@@ -1387,9 +1395,12 @@ TD.jyrRxf-oKdM2c-tJHJj {
     border-radius: 25px !important;
     border: none !important;
     color: rgb(8, 66, 160) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
     background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
     transition: all 0.3s ease !important;
+}
+
+.ry3kXd .MocG8c:hover {
+    transform: translateY(-1px) !important;
 }
 
 .i4ewOd-rymPhb-haAclf-yOOK0-j4gsHd .ry3kXd .MocG8c.LMgvRb.KKjvXb {
