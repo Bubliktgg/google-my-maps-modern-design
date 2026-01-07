@@ -54,7 +54,8 @@ div.XKSfm-Sx9Kwc,
 .JIbV8-TaUzNb-LgbsSe:hover,
 .un1lmc-pbTTYe-ibnC6b-htvI8d,
 .HzV7m-KoToPc-hFsbo-ornU0b.uVccjd,
-.HzV7m-KoToPc-hFsbo-ornU0b.uVccjd.N2RpBe {
+.HzV7m-KoToPc-hFsbo-ornU0b.uVccjd.N2RpBe,
+.OzwZjf-jRmmHf-MZArnb-KDwhZb.fO2voc-jRmmHf-LJTIlf div.fO2voc-jRmmHf-MZArnb-r4nke {
     opacity: .8 !important;
 }
 
@@ -92,7 +93,8 @@ textarea::placeholder {
 }
 
 div.VIpgJd-TUo6Hb-xJ5Hnf,
-div.XKSfm-Sx9Kwc-xJ5Hnf {
+div.XKSfm-Sx9Kwc-xJ5Hnf,
+.qqvbed-VTkLkc div.fO2voc-jRmmHf-MZArnb-r4nke {
     opacity: 1 !important;
 }
 
@@ -452,6 +454,13 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
     color: rgb(8, 66, 160) !important;
 }
 
+
+/* Details from Google Maps на Viewer */
+.qqvbed-VTkLkc.fO2voc-jRmmHf-LJTIlf {
+    padding: 20px 100px 12px 25px !important;
+    margin: 8px 8px !important;
+}
+
 /* Отображение фото */
 .qqvbed-cGMI2b-HiaYvf {
     border-radius: 12px !important;
@@ -785,7 +794,7 @@ div.fO2voc-jRmmHf-MZArnb-r4nke {
 /* Таблица атрибутов */
 .i4ewOd-TaUzNb-p83tee-jyrRxf,
 .i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-g7W7Ed-haAclf,
-div.fO2voc-jRmmHf-LJTIlf {
+.fO2voc-jRmmHf-LJTIlf {
     background: var(--dt-primary-container, rgba(0, 94, 255, 0.1)) !important;
     color: rgb(87, 125, 187) !important;
     transition: all 0.3s ease !important;
