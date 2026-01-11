@@ -84,12 +84,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Основные проверяемые домены
             const supportedDomains = [
-                'www.google.com',
-                'www.google.com.ua',
+                'www.google.ca',
                 'www.google.co.uk',
+                'www.google.com',
                 'www.google.com.tr',
+                'www.google.com.ua',
                 'www.google.de',
+                'www.google.es',
                 'www.google.fr',
+                'www.google.it',
+                'www.google.nl',
                 'www.google.pl',
                 'www.google.ru'
             ];

@@ -34,7 +34,7 @@
 - **Copy** (`/copy`) - duplicating existing maps
 
 #### 🌍 All Languages & Regions:
-- **Any Google domain**: .com, .com.ua, .co.uk, .com.tr, .de, .fr, .pl, .ru
+- **All major Google domain**: .com, .com.ua, .co.uk, .com.tr, .de, .fr, .pl, .ru, .ca, .es, .it, .nl
 - **Any interface language**: automatic detection
 
 #### 👥 All Account Types:
@@ -129,7 +129,7 @@ Thanks to everyone who tested and suggested improvements for this extension!
 - **Копирование** (`/copy`) - дублирование существующих карт
 
 #### 🌍 Все языки и регионы:
-- **Любой домен Google**: .com, .com.ua, .co.uk, .com.tr, .de, .fr, .pl, .ru
+- **Все основные домены Google**: .com, .com.ua, .co.uk, .com.tr, .de, .fr, .pl, .ru, .ca, .es, .it, .nl
 - **Любой язык интерфейса**: автоматическое определение
 
 #### 👥 Все варианты аккаунтов:
