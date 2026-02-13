@@ -1305,7 +1305,7 @@ TD.jyrRxf-oKdM2c-tJHJj {
     font-weight: bold !important;
     border: 1px solid rgb(9, 56, 131, 0.2) !important;
     color: rgb(8, 66, 160) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: none !important;
     background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
     transition: all 0.3s ease !important;
 }
@@ -1324,7 +1324,7 @@ TD.jyrRxf-oKdM2c-tJHJj {
 .QT3Do-t0O6ic-BIzmGd-haAclf .QT3Do-t0O6ic-BIzmGd {
     background-color: rgb(232, 240, 254) !important;
     border: 1px solid rgb(9, 56, 131, 0.2) !important;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px !important;
+    box-shadow: none !important;
     transition: all 0.3s ease !important;
 }
 
@@ -1381,7 +1381,7 @@ TD.jyrRxf-oKdM2c-tJHJj {
     font-weight: bold !important;
     border: 1px solid rgb(9, 56, 131, 0.2) !important;
     color: rgb(8, 66, 160) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: none !important;
     outline: none !important;
     background: var(--dt-primary-container, rgb(232, 240, 254)) !important;
     transition: all 0.3s ease !important;
@@ -1446,8 +1446,8 @@ TD.jyrRxf-oKdM2c-tJHJj {
     border-radius: 25px !important;
     border: none !important;
     color: rgb(8, 66, 160) !important;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px !important;
-    background: var(--dt-primary-container, rgb(193, 216, 255)) !important;
+    box-shadow: none !important;
+    background: #c2d3ed !important;
     padding: 2px !important;
     max-height: 46px !important;
     margin-top: 2px !important;
