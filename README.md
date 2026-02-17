@@ -16,6 +16,7 @@
 - **Modern shadows** and depth effects
 - **Smooth animations** on hover and interaction
 - **Custom scrollbars** with a stylish design
+- **Modern Google Font** looks more beautiful
 - **Pataka** in the screen corner
 
 ### 🛠️ Functional Improvements
@@ -111,6 +112,7 @@ Thanks to everyone who tested and suggested improvements for this extension!
 - **Современные тени** и эффекты глубины
 - **Плавные анимации** при наведении и взаимодействии
 - **Кастомные скроллбары** со стильным дизайном
+- **Современный шрифт Google** выглядит красивее
 - **Патака** в углу экрана
 
 ### 🛠️ Функциональные улучшения

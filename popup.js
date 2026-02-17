@@ -143,20 +143,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Обновление UI переключателя языка
+    // UI переключатель языка
     function updateLanguageUI() {
         const buttons = document.querySelectorAll('.lang-btn');
+        const switcher = document.querySelector('.lang-switcher');
+
         buttons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === currentLang);
         });
 
-        // Позиционируем индикатор
-        const activeBtn = document.querySelector(`.lang-btn[data-lang="${currentLang}"]`);
-        if (activeBtn && langIndicator) {
-            const btnWidth = activeBtn.offsetWidth;
-            const btnOffset = activeBtn.offsetLeft;
-            langIndicator.style.width = `${btnWidth}px`;
-            langIndicator.style.transform = `translateX(${btnOffset}px)`;
+        if (switcher) {
+            switcher.setAttribute('data-lang', currentLang);
         }
     }
 
