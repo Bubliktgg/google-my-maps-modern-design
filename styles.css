@@ -1,15 +1,210 @@
-/* My Maps Modern Design - Оптимизированные стили */
+/* My Maps Modern Design */
 
-/* ===== ОБЩИЕ СТИЛИ И УТИЛИТЫ ===== */
+/* ===== Main styles ===== */
 
 /* Smooth transitions for all elements */
 .HzV7m-mU4ghb * {
     transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
-/* ===== ОСНОВНЫЕ СКРУГЛЕНИЯ 10PX ===== */
+/* ===== Google Sans Fonts ===== */
 
-/* Zoom controls */
+/* Load Google Sans font */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+
+/* Base font for all elements - EXCLUDE google-symbols class */
+.HzV7m-mU4ghb *:not(.google-symbols):not(.add_to_drive):not([class*="drive"]):not([jsname="drive"]),
+body:not(.google-symbols),
+html:not(.google-symbols),
+div:not(.google-symbols),
+span:not(.google-symbols),
+button:not(.google-symbols),
+input:not(.google-symbols),
+textarea:not(.google-symbols),
+select:not(.google-symbols),
+a:not(.google-symbols),
+p:not(.google-symbols),
+h1:not(.google-symbols),
+h2:not(.google-symbols),
+h3:not(.google-symbols),
+h4:not(.google-symbols),
+h5:not(.google-symbols),
+h6:not(.google-symbols),
+li:not(.google-symbols),
+td:not(.google-symbols),
+th:not(.google-symbols),
+label:not(.google-symbols),
+.gm-style:not(.google-symbols),
+.gm-style *:not(.google-symbols) {
+    font-family: 'Google Sans', 'Product Sans', 'Roboto', Arial, Helvetica, sans-serif !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
+}
+
+/* Special fix for google-symbols and Drive icon - use original Google Material Icons */
+.google-symbols,
+.add_to_drive,
+.QT3Do-LgbsSe[aria-label*="Drive"],
+[jsname="drive"],
+[class*="drive"] .Bz112c,
+[aria-label*="Drive"] .Bz112c {
+    font-family: 'Material Icons', 'Material Symbols Outlined', 'Google Material Icons', Arial, sans-serif !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizeLegibility !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    font-feature-settings: "liga" !important;
+}
+
+/* Load Material Icons for Drive button */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+/* Bold text weight */
+b,
+strong {
+    font-weight: 500 !important;
+}
+
+/* Headers weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+[class*="heading"],
+[class*="title"],
+[class*="header"] {
+    font-weight: 500 !important;
+}
+
+/* Secondary text */
+small,
+.small,
+[class*="secondary"],
+[class*="description"],
+[class*="hint"] {
+    font-weight: 400 !important;
+}
+
+/* Map copyright */
+.gm-style-cc,
+.gm-style-cc div,
+.gm-style-cc span,
+.gm-style-cc a {
+    font-family: 'Google Sans', 'Product Sans', 'Roboto', Arial, sans-serif !important;
+    font-size: 11px !important;
+}
+
+/* Card titles */
+.i4ewOd-nUpftc-NnAfwf-fmcmS,
+.mU4ghb-IMAj2e-IT5dJd-fmcmS,
+.QA0Szd-xqKM5b-fmcmS {
+    font-weight: 500 !important;
+}
+
+/* Buttons */
+button,
+.LgbsSe,
+.tk3N6e-LgbsSe,
+.VIpgJd-INgbqf-LgbsSe,
+[class*="button"] {
+    font-weight: 500 !important;
+}
+
+/* Input fields */
+input,
+textarea,
+select,
+[contenteditable="true"] {
+    font-weight: 400 !important;
+}
+
+/* Menu items */
+.z80M1,
+.JPdR6b .z80M1,
+[class*="menu-item"] {
+    font-weight: 400 !important;
+}
+
+/* Icons - keep icon fonts for non-Drive icons */
+.Bz112c:not(.google-symbols):not(.add_to_drive):not([class*="drive"] .Bz112c),
+[class*="icon"]:not([class*="text"]):not(.google-symbols):not(.add_to_drive):not([class*="drive"]) {
+    font-family: inherit !important;
+    line-height: 1 !important;
+}
+
+/* Numbers */
+[class*="count"],
+[class*="value"],
+[class*="number"] {
+    font-feature-settings: "tnum" !important;
+    font-variant-numeric: tabular-nums !important;
+}
+
+/* Tooltips */
+.gm-style-iw-c,
+.gm-style-iw-d,
+[role="tooltip"] {
+    font-size: 12px !important;
+}
+
+/* Toolbars */
+#zoomToolbar *,
+#undoRedoToolbar *,
+#drawingToolbar *,
+#directionsToolbar *,
+#measureToolbar *,
+#mobileToolbar * {
+    font-family: 'Google Sans', 'Product Sans', 'Roboto', Arial, sans-serif !important;
+}
+
+/* Tables */
+.jyrRxf- *,
+.i4ewOd-TaUzNb- * {
+    font-size: 13px !important;
+}
+
+/* Notifications */
+.tk3N6e-cXJiPb-TSZdd,
+.tk3N6e-cXJiPb-Tswv1b {
+    font-weight: 500 !important;
+    font-size: 12px !important;
+}
+
+/* Search input */
+#mapsprosearch-field,
+.G0jgYd-ZMv3u input {
+    font-weight: 400 !important;
+    font-size: 14px !important;
+}
+
+/* Placeholders */
+::placeholder {
+    font-weight: 400 !important;
+}
+
+/* Dialog titles */
+.XKSfm-Sx9Kwc h1,
+.XKSfm-Sx9Kwc h2,
+.picker-dialog h1,
+.picker-dialog h2 {
+    font-weight: 500 !important;
+    font-size: 18px !important;
+}
+
+/* Dropdowns */
+.VIpgJd-xl07Ob,
+[class*="popup"] [class*="menu"] {
+    font-size: 13px !important;
+}
+
+/* ==== Zoom controls ==== */
 .nJjxad-bMcfAe-haAclf,
 .nJjxad-bEDTcc-LgbsSe,
 .nJjxad-m9bMae-LgbsSe,
@@ -31,7 +226,7 @@ div.XKSfm-Sx9Kwc,
     overflow: hidden !important;
 }
 
-/* Серые иконки в чёрные */
+/* ===== Серые иконки в чёрные ===== */
 .i4ewOd-rymPhb-rymPhb-nUpftc .i4ewOd-ibnC6b-xl07Ob-Bz112c,
 .i4ewOd-rymPhb-rymPhb-nUpftc .i4ewOd-ibnC6b-euCgFf-Bz112c,
 .i4ewOd-ibnC6b-PoC6nf-jOfkMb-Bz112c,
@@ -123,7 +318,7 @@ div.XKSfm-Sx9Kwc-xJ5Hnf,
 
 #zoomToolbar,
 .nJjxad-bMcfAe-haAclf.nJjxad-HzV7m {
-    background: var(--dt-primary-container, rgb(237, 245, 255)) !important;
+    background: rgb(237, 245, 255) !important;
 }
 
 .nJjxad-LgbsSe {
@@ -371,6 +566,9 @@ div.XKSfm-Sx9Kwc,
     color: rgb(8, 66, 160) !important;
     opacity: 1 !important;
     overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: normal !important;
 }
 
 /* Нижний блок */
@@ -550,7 +748,7 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
     box-shadow: none !important;
     border-radius: 25px !important;
     border: 0px !important;
-    background: var(--dt-primary-container, rgba(0, 94, 255, 0.1)) !important;
+    background: rgba(0, 94, 255, 0.1) !important;
     color: rgb(8, 66, 160) !important;
     transition: all 0.3s ease !important;
 }
@@ -562,6 +760,10 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
 .WHyFic .pbTTYe.pbTTYe-auswjd::before,
 .WHyFic .pbTTYe-ZmdkE .pbTTYe::before {
     border-radius: 5px !important;
+}
+
+.WHyFic .pbTTYe.pbTTYe-auswjd::before {
+    background: rgb(76, 144, 240) !important;
 }
 
 .un1lmc-pbTTYe-ibnC6b-ZmdkE,
@@ -837,6 +1039,11 @@ div.fO2voc-jRmmHf-LJTIlf {
     max-width: 290px !important;
 }
 
+.dzWwaf-qqvbed.SfQLQb-T3iPGc .qqvbed-VTkLkc.fO2voc-jRmmHf-LJTIlf {
+    max-width: none !important;
+
+}
+
 .JIbV8-TaUzNb-r4nke {
     padding: 0 !important;
 }
@@ -913,6 +1120,15 @@ div.fO2voc-jRmmHf-LJTIlf {
 
 .i4ewOd-TaUzNb-QQhtn.i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-p83tee-lTBxed {
     max-width: 290px !important;
+}
+
+.pbTTYe-INgbqf-hSRGPd {
+    background: rgb(232, 240, 254) !important;
+    border-radius: 25px !important;
+    color: rgb(8, 66, 160) !important;
+    padding-right: 5px !important;
+    padding-left: 0 !important;
+    margin-bottom: 1px !important;
 }
 
 /* Таблицы */
