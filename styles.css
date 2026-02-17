@@ -676,7 +676,6 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
     color: rgb(8, 66, 160) !important;
 }
 
-
 /* Details from Google Maps на Viewer */
 .qqvbed-VTkLkc.fO2voc-jRmmHf-LJTIlf {
     border-radius: 12px !important;
@@ -797,6 +796,10 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
 .GmP9w-d7Lfxd-LgbsSe-HzV7m-Bz112c,
 div.fO2voc-jRmmHf-MZArnb-r4nke {
     color: rgb(8, 66, 160) !important;
+}
+
+.fO2voc-jRmmHf-MZArnb-r4nke {
+    pointer-events: none !important;
 }
 
 .VIpgJd-wQNmvb-gk6SMd {
