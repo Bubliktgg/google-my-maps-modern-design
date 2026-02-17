@@ -858,7 +858,8 @@ div.fO2voc-jRmmHf-MZArnb-r4nke {
 #stylepopup-popular-container .VIpgJd-INgbqf,
 #stylepopup-othericons .VIpgJd-INgbqf {
     border-radius: 12px !important;
-    background: rgb(241, 245, 250) !important;
+    background: rgba(0, 94, 255, 0.1) !important;
+    box-shadow: none !important;
 }
 
 #stylepopup-color .VIpgJd-nEeMgc-eEDwDf>div,
