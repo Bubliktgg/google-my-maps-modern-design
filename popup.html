@@ -2,18 +2,21 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <!-- Load Google Sans font -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         body {
             width: 320px;
             padding: 0;
             margin: 0;
-            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif;
             background: #f8f9fa;
         }
 
         .container {
             background: white;
-            border-radius: 12px;
+            border-radius: 25px;
             margin: 8px;
             padding: 16px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -36,17 +39,17 @@
         /* Стили для переключателя языка */
         .lang-switcher {
             display: flex;
-            gap: 4px;
             background: #f1f3f4;
             border-radius: 20px;
             padding: 2px;
             position: relative;
+            width: 68px;
         }
 
         .lang-btn {
             background: none;
             border: none;
-            padding: 6px 12px;
+            padding: 6px 0;
             border-radius: 18px;
             font-size: 12px;
             font-weight: 500;
@@ -54,6 +57,8 @@
             color: #5f6368;
             transition: all 0.2s ease;
             z-index: 1;
+            flex: 1;
+            text-align: center;
         }
 
         .lang-btn.active {
@@ -63,12 +68,19 @@
         .lang-indicator {
             position: absolute;
             top: 2px;
+            left: 2px;
+            width: 32px;
             height: calc(100% - 4px);
             border-radius: 18px;
             background: white;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 0;
+        }
+
+        /* Позиции для индикатора */
+        .lang-switcher[data-lang="ru"] .lang-indicator {
+            transform: translateX(32px);
         }
 
         .version-info {
@@ -81,7 +93,7 @@
         .status {
             margin: 12px 0;
             padding: 8px 12px;
-            border-radius: 12px;
+            border-radius: 25px;
             text-align: center;
             font-size: 12px;
             display: none;
@@ -106,7 +118,7 @@
             background: #0b57d0;
             color: white;
             border: none;
-            border-radius: 12px;
+            border-radius: 25px;
             cursor: pointer;
             font-size: 14px;
             font-weight: 500;
@@ -130,7 +142,7 @@
         .page-info {
             background: #e9eef6;
             padding: 8px 12px;
-            border-radius: 12px;
+            border-radius: 25px;
             margin: 12px 0;
             font-size: 11px;
             color: #0842A0;
@@ -173,7 +185,7 @@
     <div class="container">
         <div class="header">
             <h3>🎨 My Maps Modern Design</h3>
-            <div class="lang-switcher">
+            <div class="lang-switcher" data-lang="en">
                 <div class="lang-indicator" id="langIndicator"></div>
                 <button class="lang-btn" data-lang="en">EN</button>
                 <button class="lang-btn" data-lang="ru">RU</button>
@@ -182,7 +194,7 @@
 
         <div class="version-info">
             Version 2.4.9 | <a href="https://github.com/Bubliktgg/google-my-maps-modern-design" id="githubLink"
-                target="_blank">GitHub</a> <!-- Добавили target="_blank" -->
+                target="_blank">GitHub</a>
         </div>
 
         <div class="page-info" id="pageInfo">
