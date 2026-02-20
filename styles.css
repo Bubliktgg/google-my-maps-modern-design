@@ -522,7 +522,9 @@ div.XKSfm-Sx9Kwc,
 .HzV7m-pbTTYe-PGTmtf.N2RpBe[aria-checked="true"] .PkgjBf,
 .ABuLec-MPu53c[aria-checked="true"] .PkgjBf,
 .uVccjd.SMdMve-MPu53c[aria-checked="true"] .PkgjBf,
-.uVccjd.zSfaEd-MPu53c[aria-checked="true"] .PkgjBf {
+.uVccjd.zSfaEd-MPu53c[aria-checked="true"] .PkgjBf,
+.HzV7m-b7CEbf .i4ewOd-pzNkMb-tJHJj,
+.i4ewOd-pzNkMb-haAclf {
     background-color: rgb(29, 69, 133, 0.85) !important;
 }
 
@@ -704,6 +706,11 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
 .qqvbed-cGMI2b-HiaYvf-cHYyed {
     background-image: none !important;
     background-color: none !important;
+}
+
+/* GMM Logo */
+#watermark {
+    background: url('https://raw.githubusercontent.com/jerseydrush/google-my-maps-modern-design/refs/heads/main/resources/GoogleMyMaps.png') left top / contain no-repeat !important;
 }
 
 /* ===== СТИЛИ ДЛЯ СТРАНИЦЫ РЕДАКТИРОВАНИЯ (EDIT) ===== */
