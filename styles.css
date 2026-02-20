@@ -709,7 +709,8 @@ div.OFA0We-haAclf.OFA0We-HzV7m {
 }
 
 /* GMM Logo */
-#watermark {
+#watermark,
+#map-renderer-container>div:last-child>div {
     background: url('https://raw.githubusercontent.com/jerseydrush/google-my-maps-modern-design/refs/heads/main/resources/GoogleMyMaps.png') left top / contain no-repeat !important;
 }
 
@@ -1206,7 +1207,8 @@ TD.jyrRxf-oKdM2c-tJHJj {
 .G0jgYd-tJHJj-ibnC6b,
 .ztA2jd-SUR3Rd,
 .XKSfm-Sx9Kwc-bN97Pc textarea,
-.i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-p83tee-lTBxed[contenteditable=true] {
+.i4ewOd-TaUzNb-haAclf div.i4ewOd-TaUzNb-p83tee-lTBxed[contenteditable=true],
+.giiMnc-tgmgze {
     border-radius: 25px !important;
     border: 0px !important;
     color: rgb(8, 66, 160) !important;
