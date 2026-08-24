@@ -88,8 +88,8 @@ Distributed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact & Support
 
-- **Author:** bbublllikk
-- **GitHub:** [github.com/Bubliktgg](https://github.com/Bubliktgg)
+- **Author:** JerseyDrush
+- **GitHub:** [github.com/Bubliktgg](https://github.com/jerseydrush)
 
 ## ⭐ Acknowledgments
 
@@ -184,8 +184,8 @@ my-maps-modern-design/
 
 ## 📞 Контакты и поддержка
 
-- **Автор:** bbublllikk
-- **GitHub:** [github.com/Bubliktgg](https://github.com/Bubliktgg)
+- **Автор:** JerseyDrush
+- **GitHub:** [github.com/Bubliktgg](https://github.com/jerseydrush)
 
 ## ⭐ Благодарности
 
